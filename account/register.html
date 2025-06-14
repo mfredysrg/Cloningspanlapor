@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35959721-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-35959721-1');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Place this data between the <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ tags of your website -->
+<title>Daftar - LAPOR!</title>
+	<link rel="canonical" href="https://www.lapor.go.id/account/register.html" />
+<meta name="description" content="Layanan Aspirasi dan Pengaduan Online Rakyat (LAPOR!) adalah sarana interaktif masyarakat dan pemerintah berbasis media sosial pertama untuk pengawasan dan peng...">
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Daftar - LAPOR!">
+<meta itemprop="description" content="Layanan Aspirasi dan Pengaduan Online Rakyat (LAPOR!) adalah sarana interaktif masyarakat dan pemerintah berbasis media sosial pertama untuk pengawasan dan pengendalian pembangunan.">
+<meta itemprop="image" >
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@lapor1708">
+<meta name="twitter:title" content="Daftar - LAPOR!">
+<meta name="twitter:description" content="Layanan Aspirasi dan Pengaduan Online Rakyat (LAPOR!) adalah sarana interaktif masyarakat dan pemerintah berbasis media sosial pertama untuk pengawasan dan pengendalian pembangunan.">
+<!-- Twitter summary card with large image must be at least 280x150px -->
+<meta name="twitter:image:src" >
+<!-- Open Graph data -->
+<meta property="og:title" content="Daftar - LAPOR!">
+<meta property="og:url" content="https://www.lapor.go.id/account/register">
+<meta property="og:image" >
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:description" content="Layanan Aspirasi dan Pengaduan Online Rakyat (LAPOR!) adalah sarana interaktif masyarakat dan pemerintah berbasis media sosial pertama untuk pengawasan dan pengendalian pembangunan.">
+<meta property="og:site_name" content="LAPOR!">
+<!-- Facebook Data -->
+<meta property="fb:app_id" content="">
+<meta property="fb:page_id" content="">
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#d7381b">
+<meta name="apple-mobile-web-app-title" content="LAPOR!">
+<meta name="application-name" content="LAPOR!">
+<meta name="theme-color" content="#ffffff">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<!-- App Styles -->
+<link href="../combine/1f25329929a6e3be6bfecc9f75ad47a4-1745327987.css" rel="stylesheet">
+<script src="../themes/lapor/assets/sweetalert2/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="../plugins/responsiv/uploader/assets/css/uploader.css">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="../ajax/libs/popper_js/1.14.7/umd/popper.min.js"></script>
+        <script src="../combine/8d931db45eae6ac902515c50c03fad65-1745327981.js"></script>
+        <script src="../themes/lapor/assets/js/zingchart.min.js"></script>
+        <script type="text/javascript" src="../npm/chartjs-plugin-datalabels-0.4.0/dist/chartjs-plugin-datalabels.min.js"></script> <!-- Baru chart plugin untuk pie -->
+    </head>
+    <body class=" pd-t-0 ">
+        <div class="loader-custom hidden"></div>
+        <script>
+    function cekNIK(){
+        $('#registerNIK').get(0).setCustomValidity('');
+        strNik = $('#registerNIK').val();
+        if (strNik !== '') {
+            if (!isNaN(strNik)){
+                if(strNik.length == 16) {
+                    if (strNik.substr(0,1) == '0') {
+                      // alert('Digit Pertama NIK tidak boleh 0');
+                      // asd.setCustomValidity('Digit Pertama NIK tidak boleh 0');
+                      $('#registerNIK').get(0).setCustomValidity('Digit Pertama NIK tidak boleh 0');
+                    }else if (strNik.slice(- 4) == '0000'){
+                      // alert('4 Digit Terakhir tidak boleh 0');
+                      // asd.setCustomValidity('4 Digit Terakhir NIK tidak boleh 0');
+                        $('#registerNIK').get(0).setCustomValidity('4 Digit Terakhir tidak boleh 0');
+                    }
+                }else{
+                    // asd.setCustomValidity('NIK harus terdiri 16 numerik');
+                    // alert('NIK harus terdiri 16 numerik');
+                    $('#registerNIK').get(0).setCustomValidity('NIK harus terdiri 16 numerik');
+                }
+            }else{
+                // alert('Format NIK harus Numerik');
+                $('#registerNIK').get(0).setCustomValidity('Format NIK harus Numerik');
+            }
+        }
+    }
+</script>
+<div class="full-height block-confirmation mb-0">
+    <div class="container">
+        <a href="../index.html">
+            <img src="../themes/lapor/assets/images/logo-white.png" alt="" class="img-responsive confirmation-brand">
+        </a>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="panel panel-confirmation pd-25">
+                    <h1 class="text-center mg-b-20">Daftar</h1>
+                    <div class="">
+                        <div class="col-md-12">
+                            <p style="font-size:12px;" class="alert alert-info">
+                                <b><i class="fa fa-info-circle"></i> Mengapa kami meminta data ini?</b> <br>
+                                Layanan SP4N-LAPOR! mengumpulkan data pribadi pengguna sebagai jaminan keabsahan dari aduan atau aspirasi yang disampaikan, pengenal identitas, memverifikasi akun dan mengirim notifikasi laporan, menilai tingkat partisipasi publik, pengolahan dan analisis data, penyusunan perencanaan dan pengambilan kebijakan, monitoring dan evaluasi, dan mendorong terciptanya kebijakan yang inklusif.
+                            </p>
+                            <h5 class="separator"><span>Gunakan Akun Media Sosial Anda</span></h5>
+<div class="row">
+    <div class="col-sm-6">
+        <a href="../account/register.html" class="btn btn-block btn-facebook mg-b-20">
+            <i class="fa fa-facebook fa-fw"></i> Facebook
+        </a>
+    </div>
+    <div class="col-sm-6">
+        <a href="../account/register.html" class="btn btn-block btn-twitter mg-b-20">
+            <i class="fa fa-twitter fa-fw"></i> Twitter
+        </a>
+    </div>
+    <div class="col-sm-12">
+        <a href="../account/register.html" class="btn btn-block btn-google mg-b-20">
+            <i class="fa fa-google fa-fw"></i> Google
+        </a>
+    </div>
+</div>
+                            <h5 class="separator"><span>Atau</span></h5>
+                            <form
+    data-request="laporAuth::onRegister"
+        data-request-flash>
+    <div class="row mg-b-20">
+        <div class="col-md-12" >
+            <div class="col-md-6">
+                <div class="form-group " >
+                    <label for="registerNIK">NIK</label>
+                    <input name="nik" type="text" class="form-control" id="registerNIK" placeholder="Nomor Induk Kependudukan (KTP)" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group is-required">
+                    <label for="registerName">Nama Lengkap</label>
+                    <input name="name" type="text" class="form-control" id="registerName" required placeholder="Nama Lengkap"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" >
+            <div class="col-md-6">
+                <div class="form-group is-required" style="height: 70px">
+                    <label for="registerDomisili">Tempat Tinggal Saat Ini</label>
+                        <select class="form-control" name="location_code" id="registerDomisili" placeholder="Ketik Tempat Tinggal Saat Ini" data-request-search="laporAuth::onSearchLocation" required>
+                        </select>
+                    <span data-validate-for="registerDomisili"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group is-required">
+                    <label for="registerTanggalLahir">Tanggal Lahir</label>
+                    <div class='input-group date'>
+                        <input type='text' id="registerTanggalLahir" name="dob" required class="form-control input-doi" placeholder="Pilih Tanggal Lahir" autocomplete="off" required>
+                        <span class="input-group-addon">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                        <span data-validate-for="registerTanggalLahir"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" >
+            <div class="col-md-6">
+                <div class="form-group is-required" style="height: 70px">
+                    <label for="registerJenisKelamin">Jenis Kelamin</label>
+                    <select class="form-control input-sm" id="registerJenisKelamin" name="gender" placeholder="Pilih Jenis Kelamin" required>
+                        <option value="">Pilih Jenis Kelamin</option>
+                        <option value="male">Laki-laki</option>
+                        <option value="female">Perempuan</option>
+                    </select>
+                    <span data-validate-for="registerJenisKelamin"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                    <div class="form-group is-required">
+                        <label for="registerPhone">No. Telp Aktif</label>
+                        <input
+                            name="phone"
+                            type="tel"
+                            class="form-control"
+                            id="registerPhone"
+                            placeholder="Minimal 8-14 Angka"
+                            required />
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-12" >
+            <div class="col-md-6">
+                <div class="form-group is-required">
+                    <label for="">Pekerjaan</label>
+                    <select class="form-control input-sm" id="jobs" name="job_id" placeholder="Pilih Pekerjaan" required>
+                        <option value="">Pilih Pekerjaan</option>
+                                                    <option value="1">Murid SD/SDLB/MI</option>
+                                                    <option value="2">Murid SMP/SMPLB/MTS</option>
+                                                    <option value="3">Murid SMA/SMALB/MA/SMK</option>
+                                                    <option value="4">Mahasiswa/Mahasiswi</option>
+                                                    <option value="5">Karyawan Swasta</option>
+                                                    <option value="6">Pegawai Negeri Sipil</option>
+                                                    <option value="7">Masyarakat Umum</option>
+                                                    <option value="8">Orangtua / Wali Murid</option>
+                                                    <option value="9">Murid PAUD/TK/RA</option>
+                                                    <option value="10">Guru PAUD/TK/RA</option>
+                                                    <option value="11">Guru SD/SDLB/MI</option>
+                                                    <option value="12">Guru SMP/SMPLB/MTS</option>
+                                                    <option value="13">Guru SMA/SMALB/MA/SMK</option>
+                                                    <option value="14">Operator Sekolah</option>
+                                                    <option value="15">Kepala Sekolah</option>
+                                                    <option value="16">Pengawas Sekolah</option>
+                                                    <option value="17">Dosen</option>
+                                                    <option value="18">Rektor</option>
+                                                    <option value="19">Dinas Pendidikan Kota/Kab</option>
+                                                    <option value="20">Dinas Pendidikan Provinsi</option>
+                                                    <option value="21">Pelaku Seni</option>
+                                                    <option value="22">Penggiat Budaya</option>
+                                                    <option value="23">LSM</option>
+                                                    <option value="24">Pers/Media</option>
+                                                    <option value="25">Pensiunan</option>
+                                                    <option value="26">Lain-Lain</option>
+                                            </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group" style="height: 70px">
+                    <label for="registerdisability">Penyandang Disabilitas?</label>
+                    <select class="form-control input-sm" id="registerdisability" name="is_disability" placeholder="Pilih Status" required>
+                        <option value="">Pilih Status</option>
+                        <option value="0">Tidak</option>
+                        <option value="1">Ya</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" >
+            <div class="col-md-6">
+                <div class="form-group is-required">
+                    <label for="registerUsername">Username</label>
+                    <input name="username" type="text" class="form-control" id="registerUsername" placeholder="Username" required />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group is-required">
+                    <label for="registerEmail">Email</label>
+                    <input
+                        name="email"
+                        type="email"
+                        class="form-control"
+                        id="registerEmail"
+                        placeholder="lapor@contoh.com"
+                        required />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" >
+            <div class="col-md-6">
+                <div class="form-group form-password is-required">
+                    <label for="registerPassword">Password</label>
+                    <input
+                        name="password"
+                        type="password"
+                        class="form-control"
+                        id="registerPassword"
+                        autocomplete="off"
+                        placeholder="********"
+                        style="margin-bottom: 1.5rem;"
+                        required />
+                    <i class="fa fa-eye"></i>
+                </div>
+                <small style="display: block; margin-top: -1rem;" class="form-caption text-muted">Minimal 8 karakter dan harus berisi kombinasi huruf kapital, huruf kecil, angka dan karakter khusus (@$!%*#?&).</small>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group form-password is-required">
+                    <label for="password_confirmation">Password Confirmation</label>
+                    <input
+                        name="password_confirmation"
+                        type="password"
+                        class="form-control"
+                        autocomplete="off"
+                        id="password_confirmation"
+                        placeholder="********"
+                        required />
+                    <i class="fa fa-eye"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-12">
+            <div class="form-group light-checkbox">
+                <input type="checkbox" onclick="$('#user_confirmation_form').toggleClass('hidden');" id="confirmation_user" data-track-input name="confirmation_user" value="1"> <label for="confirmation_user">Apakah Anda ingin menambahkan pihak yang dapat dikonfirmasi?</a></label>
+            </div>
+        </div>
+        <div class="col-md-12 hidden" id="user_confirmation_form">
+            <div class="well col-md-12">
+                <div class="col-md-6">
+                    <div class="form-group is-required">
+                        <label for="registerName">Nama Pihak</label>
+                        <input
+                            name="user_confirmation_name"
+                            type="text"
+                            class="form-control"
+                            id="registerName"
+                            placeholder="Nama Lengkap"
+                        />
+                    </div>
+                    <div class="form-group is-required">
+                        <label for="registerName">No. Telp Aktif Pihak</label>
+                        <input
+                            name="user_confirmation_phone"
+                            type="tel"
+                            class="form-control"
+                            id="registerPhone"
+                            placeholder="Minimal 8-14 Angka"
+                             />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group is-required">
+                        <label for="registerEmail">Email Pihak</label>
+                        <input
+                            name="user_confirmation_email"
+                            type="email"
+                            class="form-control"
+                            id="registerEmail"
+                            placeholder="lapor@contoh.com"
+                             />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group light-checkbox">
+                <input type="checkbox" id="tos" data-track-input name="tos" value="1"> <label for="tos">Saya telah membaca dan menyetujui <a href="../terms-of-use.html" target="_blank">Syarat dan Ketentuan Layanan</a></label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block mg-t-20" data-attach-loading>Daftar</button>
+            </div>
+        </div>
+</form>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="../index.html" class="btn btn-warning text-white ">Kembali ke Halaman depan</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+    <div class="col-sm-6 block-register-showcase" style="background-image: url('../themes/lapor/assets/images/register-bg.png')">
+        <a href="../index.html">
+            <img src="../themes/lapor/assets/images/logo-white.png" alt="" class="img-responsive">
+        </a>
+    </div> -->
+</div>        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Translate Page</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    Disclaimer: Anda menggunakan Google Translate. Kami tidak bertanggung jawab atas keakuratan informasi dalam bahasa diterjemahkan
+                    <div id="google_translate_element" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <form method="POST" action="../account/register.html" accept-charset="UTF-8" data-request="laporAuth::onSignin" data-request-update="&#039;captcha-login&#039;: &#039;#google-captcha&#039;"><input name="_session_key" type="hidden" value="kmq1eQyrbg2DtXVRPMZ9cXNdsbjtGq6S2XYwGflA"><input name="_token" type="hidden" value="w4DiE3TrvlOIJ8I4HLoGbcwDmyeVlQTbvekiOk6A">
+    <div class="modal fade" id="modalLogin">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title text-center">MASUK</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h5 class="separator"><span>Gunakan Akun Media Sosial Anda</span></h5>
+<div class="row">
+    <div class="col-sm-6">
+        <a href="../account/register.html" class="btn btn-block btn-facebook mg-b-20">
+            <i class="fa fa-facebook fa-fw"></i> Facebook
+        </a>
+    </div>
+    <div class="col-sm-6">
+        <a href="../account/register.html" class="btn btn-block btn-twitter mg-b-20">
+            <i class="fa fa-twitter fa-fw"></i> Twitter
+        </a>
+    </div>
+    <div class="col-sm-12">
+        <a href="../account/register.html" class="btn btn-block btn-google mg-b-20">
+            <i class="fa fa-google fa-fw"></i> Google
+        </a>
+    </div>
+</div>                            <h5 class="separator"><span>Atau dengan Email Anda</span></h5>
+                            <div class="form-group">
+                                <label for="userSigninLogin">Email, No. telp, atau username</label>
+                                <input
+                                    name="login"
+                                    type="text"
+                                    class="form-control"
+                                    id="userSigninLogin"
+                                    tabindex="1"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <a href="../forgot-password.html" class="pull-right">Lupa password?</a>
+                                <label for="userSigninPassword">Password</label>
+                                <input
+                                    name="password"
+                                    type="password"
+                                    autocomplete="off"
+                                    class="form-control"
+                                    id="userSigninPassword"
+                                    tabindex="2"
+                                    required>
+                            </div>
+                            <div id="google-captcha"></div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" data-attach-loading
+                                >Masuk</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer clearfix" style="text-align: center">
+                    Anda belum memiliki akun?<br><a class="btn btn-link" href="../account/register.html">Daftar Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+        <div class="modal fade" id="modalMap">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center">Pilih Lokasi</h4>
+            </div>
+            <div class="modal-body pd-0">
+                <input type="hidden" data-toggle="locationMarkerLatitude">
+                <input type="hidden" data-toggle="locationMarkerLongitude">
+                <div class="location-marker"><img src="../themes/lapor/assets/images/complaint-marker.png" alt="" height="70"></div>
+                <div class="location-name bg-warning pd-10 text-ellipsis">
+                    <span data-toggle="locationName">Geser map untuk mendapatkan lokasi yang anda inginkan</span>
+                </div>
+                <div id="mapLocation"><center class="pd-10">Silahkan aktifkan fitur pelacakan lokasi Anda pada browser</center></div>
+            </div>
+            <div class="modal-footer">
+                <div class="text-center">
+                    <button class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="removeLocation">Hapus Lokasi</button>
+                    <button class="btn btn-info" data-dismiss="modal">Pilih Lokasi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="loadedcontentmodal"></div>
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=bzbTAKXD"></script>
+        <script type="text/javascript" src="../widget_disabilitas.js"></script>
+        <script src="../combine/84c55bf60c3c9ba06444003c2ae36965-1745327986.js"></script>
+        <script src="../plugins/responsiv/uploader/assets/vendor/dropzone/dropzone.js"></script>
+<script src="../plugins/responsiv/uploader/assets/js/uploader.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBLHjAqc9z24spcOJmit4weWYBe32eLBho&libraries=places, geometry&region=ID"></script>
+<script src="../maptilerlayer/v1/index.js"></script>
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-134274968-1', 'auto');
+    ga('set', 'forceSSL', true);        ga('send', 'pageview');
+</script>
+                        <script>
+            function displaytranslate() {
+                var a = document.getElementById('translate');
+                if (a.style.display == 'none') {
+                    a.style.display = 'block';
+                }
+                if (a.style.display == 'block') {
+                    a.style.display = 'none';
+                }
+            }
+        </script>
+        <script src="../themes/lapor/assets/dashboard/leaflet/leaflet.js"></script>
+        <script src="../themes/lapor/assets/dashboard/leaflet/leaflet-providers-master/leaflet-providers.js"></script>
+        <script src="../themes/lapor/assets/dashboard/leaflet/leaflet.ajax.min.js"></script>
+    </body>
+</html>
