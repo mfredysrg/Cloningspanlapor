@@ -1094,5 +1094,47 @@ var swiper = new Swiper('.swiper-social-feed', {
         <script src="themes/lapor/assets/dashboard/leaflet/leaflet.js"></script>
         <script src="themes/lapor/assets/dashboard/leaflet/leaflet-providers-master/leaflet-providers.js"></script>
         <script src="themes/lapor/assets/dashboard/leaflet/leaflet.ajax.min.js"></script>
-    <center><font size="2">This is the free demo result. For a full version of this website, please go to  <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/">Website Downloader</a></font></center></body>
-</html>
+    <center><font size="2">This is the free demo result. For a full version of this website, please go to  <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/">Website Downloader</a></font></center>
+ 
+        <div id="daftar-laporan">
+    <h2>Memuat Laporan Terbaru...</h2>
+    </div>
+
+    <script>
+    // Fungsi untuk mengambil data dari API kita
+    async function ambilDataLaporan() {
+        try {
+        const response = await fetch('/api/laporan'); // Memanggil API backend
+        const data = await response.json();
+        
+        const container = document.getElementById('daftar-laporan');
+        container.innerHTML = '<h2>Laporan Terbaru</h2>'; // Hapus pesan "memuat"
+
+        // Tampilkan setiap laporan ke halaman
+        data.laporan.forEach(lpr => {
+            const laporanDiv = document.createElement('div');
+            laporanDiv.style.border = '1px solid #ccc';
+            laporanDiv.style.padding = '10px';
+            laporanDiv.style.marginBottom = '10px';
+            
+            laporanDiv.innerHTML = `
+            <h3>${lpr.judul}</h3>
+            <p>${lpr.isi}</p>
+            <small>Dilaporkan oleh: ${lpr.pelapor} pada ${new Date(lpr.tanggal).toLocaleString('id-ID')}</small>
+            `;
+            container.appendChild(laporanDiv);
+        });
+
+        } catch (error) {
+        console.error('Gagal mengambil data:', error);
+        document.getElementById('daftar-laporan').innerHTML = '<h2>Gagal memuat data laporan.</h2>';
+        }
+    }
+
+    // Panggil fungsi tersebut saat halaman dimuat
+    ambilDataLaporan();
+    </script>
+
+
+    </body>
+    </html>
